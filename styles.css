@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Poppins-Bold.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: hsla(0, 6%, 72%, 0.842);
+  color: hsl(0, 0%, 0%);
+  /* border: 1px solid red; */
+  padding-top: 100px;
+}
+#calculator {
+  width: 600px;
+  display: grid;
+  place-content: center;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 20px 40px;
+  border-radius: 10px 10px 50px;
+  position: relative;
+}
+.input-container {
+  /* width: 80%; */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid hsla(0, 1%, 44%, 0.452);
+  padding-bottom: 60px;
+}
+
+.input-container label {
+  font-weight: 550;
+  color: hsl(0, 1%, 44%);
+  font-size: 14px;
+  /* padding-bottom: 15px; */
+}
+.input-container label input {
+  width: 100%;
+  padding: 10px 0px;
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: hsl(0, 0%, 0%);
+  margin-top: 5px;
+  border: 1px solid hsla(0, 1%, 44%, 0.452);
+  border-radius: 2px;
+  background-color: transparent;
+  outline: 0;
+}
+
+.calculate {
+  background-color: hsl(259, 84%, 50%);
+  border: 0;
+  outline: 0;
+  width: 10%;
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  bottom: 240px;
+  cursor: pointer;
+}
+.calculate:hover {
+  background-color: hsla(259, 100%, 65%, 0.842);
+}
+
+.calculate img {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+.error {
+  font-size: 10px;
+  font-weight: 400;
+  color: red;
+  text-align: center;
+}
+
+.errColor {
+  color: red;
+  border: 1px solid red;
+}
+
+.display {
+
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.display-year,
+.display-month,
+.display-day {
+  color: hsl(259, 100%, 65%);
+}
+
+@media (max-width: 470px) {
+  #calculator {
+    width: 80%;
+  }
+  .input-container label {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .input-container label input {
+    padding: 12px 5px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .calculate {
+    width: 50px;
+    height: 50px;
+    right: 120px;
+    top: 130px;
+  }
+
+  .display {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+  .error {
+  font-size: 8px;
+  font-weight: 300;
+  text-align: center;
+  
+}
+}
